@@ -1,0 +1,33 @@
+[ {
+  "userid" : "2233",
+  "name" : "mohammed",
+  "email" : "mohammed@gmail.com",
+  "holdings" : [ {
+    "holdingId" : "0000",
+    "asset" : {
+      "type" : "stock",
+      "assetId" : "9999",
+      "assetName" : "tata",
+      "purchasePrice" : 66.0,
+      "currentPrice" : 66.0
+    },
+    "quantity" : 10,
+    "currentValue" : 660.0
+  } ]
+}, {
+  "userid" : "112233",
+  "name" : "rafi",
+  "email" : "rafi@gmail.com",
+  "holdings" : [ {
+    "holdingId" : "8888",
+    "asset" : {
+      "type" : "stock",
+      "assetId" : "7777",
+      "assetName" : "reliance",
+      "purchasePrice" : 88.0,
+      "currentPrice" : 88.0
+    },
+    "quantity" : 20,
+    "currentValue" : 1760.0
+  } ]
+} ]
