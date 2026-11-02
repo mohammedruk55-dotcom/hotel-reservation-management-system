@@ -1,4 +1,4 @@
-package com.klu;
+package com.portfolioproject;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

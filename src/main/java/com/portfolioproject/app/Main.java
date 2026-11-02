@@ -65,32 +65,35 @@ public class Main {
 
                 case 1:
 
-                    System.out.println("\n--- Create User ---");
+			    	System.out.println("\n--- Create User ---");
 
-                    System.out.print("Enter User ID: ");
-                    String userid = sc.nextLine();
+			    	System.out.print("Enter User ID: ");
+		    		String userid = sc.nextLine();
 
-                    System.out.print("Enter User Name: ");
-                    String name = sc.nextLine();
+			    	System.out.print("Enter User Name: ");
+			    	String name = sc.nextLine();
 
-                    System.out.print("Enter Email: ");
-                    String email = sc.nextLine();
+			    	System.out.print("Enter Email: ");
+			    	String email = sc.nextLine();
 
-                    // Check whether user already exists
-                    if (portfolioService.userExists(userid)) {
+			    	// Check whether user already exists
+			    	if (portfolioService.userExists(userid)) 
+			    	{
+				    	System.out.println("User already exists!");
+				    	// Log a warning
+				    	//logger.warn("Attempt to create an existing user: {}", userid);
 
-                        System.out.println("User already exists!");
+				    } 
+				    else 
+	    			{
+		    			User user = new User(userid, name, email);
+		    			portfolioService.addUser(user);
+		    			System.out.println("User created successfully!");
+		     			// Log successful user creation
+				    //	logger.info("User created successfully: {}", userid);
+		    		}
+			    	break;
 
-                    } else {
-
-                        User user = new User(userid, name, email);
-
-                        portfolioService.addUser(user);
-
-                        System.out.println("User created successfully!");
-                    }
-
-                    break;
 
 
                 // =========================================
